@@ -1,0 +1,30 @@
+download git and login into your GitHub acc and create repository.
+
+open vs code
+
+create folder wadass
+	>folder prac
+		>file1.txt 
+
+open terminal
+
+>git --version
+>git init
+>git add .
+>git status
+>git remote add origin "copy your GitHub link"
+>git commit -m "first commit"
+>git status
+>git push -u origin master
+
+//file1 added 
+
+create file2.txt in prac folder
+
+>git status
+>git add .
+>git status
+>git commit -m "first commit"
+>git push -u origin master
+
+//file2 added 

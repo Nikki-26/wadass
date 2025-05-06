@@ -1,0 +1,27 @@
+create folder-wadass(in lowercase)
+	>create file
+
+	>main.js :
+
+ 	console.log("Hello world");
+	console.log("Docker exp");
+
+
+	>Dockerfile :
+	
+	FROM node:alpine
+
+	WORKDIR /wadass
+	
+	COPY . .
+
+	CMD ["node", "main.js"]
+
+now open terminal
+
+>cd wadass
+>docker --version
+>node main.js
+>docker build -t wadass .
+>docker run wadass
+>docker image

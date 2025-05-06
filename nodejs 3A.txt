@@ -1,0 +1,44 @@
+create folder wadass
+
+open terminal
+>npm init -y
+>npm install express
+ 2 file created
+
+create file
+
+// index.js
+
+const express = require('express');
+const app = express();
+
+const PORT = 8080;
+
+app.use(express.static('public'));
+
+app.listen(PORT, () => {
+    console.log(`App listening on port : ${PORT}`);
+});
+
+create public folder in wadass
+	>create file
+
+// index.html
+	
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nikita</title>
+  </head>
+  <body>
+    <h1>Helloo world</h1>
+  </body>
+</html>
+
+open terminal
+>cd wadass
+>index.html
+
+open browser and type localhost:8080

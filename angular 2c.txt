@@ -1,0 +1,90 @@
+open vs terminal
+create folder wadass
+
+>npm --version //(make sure to have node js downloaded)
+>npm install -g @anugular/cli@latest
+>ng new wadass (Y)
+
+
+//app.component.html
+
+<h1>{{ title }}</h1>
+<p>
+  NAME : <input
+    type="text"
+    #name
+    placeholder="Enter your name"
+    name="Name"
+  /><br /><br>
+  <input
+    type="text"
+    #address
+    placeholder="Enter your text"
+    name="Home Address"
+  /><br />
+  <input
+    type="text"
+    #contact
+    placeholder="Enter your contact"
+    name="YOUR CONTACT"
+  /><br />
+  <input
+    type="email"
+    #email
+    placeholder="Enter your email"
+    name="EMAIL ID"
+  /><br />
+  <input
+    type="password"
+    #pass
+    placeholder="Enter your password"
+    name="GIVE PASSWORD"
+  /><br />
+  <button
+    (click)="getvalue(name.value, address.value, contact.value, email.value)"
+  >
+    Register
+  </button>
+</p>
+
+<br />
+<h1>YOUR REGISTERED DATA</h1>
+<h1>YOUR REGISTERED DATA</h1>
+<p>Name: {{ displayname }}</p>
+<p>Address: {{ displayaddress }}</p>
+<p>Contact: {{ displaycontact }}</p>
+<p>Email: {{ displayemail }}</p>
+
+
+//app.component.ts
+
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css',
+})
+export class AppComponent {
+  title = 'REGISTRATION FORM';
+  displayname = '';
+  displayaddress = '';
+  displaycontact = '';
+  displayemail = '';
+  getvalue(name: string, address: string, contact: string, email: string) {
+    this.displayname = name;
+    this.displayaddress = address;
+    this.displaycontact = contact;
+    this.displayemail = email;
+    alert('Registration Successful');
+  }
+} 
+
+go to terminal
+
+>cd wadass
+>ng serve
+
+copy url and paste to browser
