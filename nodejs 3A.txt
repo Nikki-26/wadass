@@ -39,6 +39,6 @@ create public folder in wadass
 
 open terminal
 >cd wadass
->index.html
+>node index.js
 
 open browser and type localhost:8080
